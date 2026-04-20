@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hightech Wireless Phones & Repair - Top-rated phone, tablet, and laptop repair in Kansas City, KS. Buy, sell, and accessorize your devices.">
+    <meta name="keywords" content="phone repair Kansas City, buy phones Kansas, screen replacement, tablet repair, laptop repair, phone accessories, tech shop">
+    <title>Hightech Wireless Phones & Repair | Kansas City</title>
+    
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --primary-dark: #0088aa;
+            --bg-dark: #0a0f18;
+            --bg-card: #151f2e;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: var(--text-light); }
+        ul { list-style: none; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--white);
+        }
+
+        .section-title span { color: var(--primary); }
+
+        section { padding: 80px 0; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+        }
+
+        nav {
+            background: rgba(10, 15, 24, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--white); }
+        .logo span { color: var(--primary); }
+
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a:hover { color: var(--primary); }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 15, 24, 0.7), rgba(10, 15, 24, 0.8)), url('http://googleusercontent.com/image_collection/image_retrieval/13610442221384194754_0') center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-content { text-align: center; max-width: 800px; margin: 0 auto; }
+        .hero-content h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; }
+
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.05);
+            overflow: hidden;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+        .product-img-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .product-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .price { font-size: 1.25rem; font-weight: bold; color: var(--primary); margin: 1rem 0; }
+
+        #book { background: #0d1421; }
+        .booking-form {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            border-radius: 8px;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        footer { background: #05080c; text-align: center; padding: 2rem 0; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .form-row, .contact-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">Hightech<span>Wireless</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#book">Book Repair</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your One-Stop Shop for <span>Phones, Repairs & Accessories</span></h1>
+                <p>Expert repair services in Kansas City. Fast, affordable, and trusted.</p>
+                <div class="hero-btns">
+                    <a href="#book" class="btn btn-primary">Book Repair</a>
+                    <a href="tel:9132998821" class="btn btn-outline">Call (913) 299-8821</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Featured <span>Devices</span></h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="product-img-container">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/5895918490873760238_0" alt="iPhone">
+                    </div>
+                    <h3>Certified iPhones</h3>
+                    <div class="price">From $299</div>
+                    <a href="#contact" class="btn btn-outline">Inquire</a>
+                </div>
+                <div class="card">
+                    <div class="product-img-container">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/7720593549267691299_0" alt="Samsung">
+                    </div>
+                    <h3>Galaxy Series</h3>
+                    <div class="price">From $249</div>
+                    <a href="#contact" class="btn btn-outline">Inquire</a>
+                </div>
+                <div class="card">
+                    <div class="product-img-container">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/10070895133140765484_0" alt="Laptop">
+                    </div>
+                    <h3>Laptops</h3>
+                    <div class="price">From $399</div>
+                    <a href="#contact" class="btn btn-outline">Inquire</a>
+                </div>
+                <div class="card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Accessories">
+                    </div>
+                    <h3>Accessories</h3>
+                    <div class="price">From $15</div>
+                    <a href="#contact" class="btn btn-outline">Shop All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book">
+        <div class="container">
+            <h2 class="section-title">Schedule <span>Appointment</span></h2>
+            <!-- Updated action URL to muzfs1@gmail.com -->
+            <form action="mailto:muzfs1@gmail.com" method="post" enctype="text/plain" class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Device Type</label>
+                        <input type="text" name="Device" class="form-control" placeholder="e.g. iPhone 15" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Issue</label>
+                        <input type="text" name="Issue" class="form-control" placeholder="e.g. Cracked Screen" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="Phone" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Date/Time</label>
+                    <input type="text" name="DateTime" class="form-control" placeholder="e.g. Monday at 2PM" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request to muzfs1@gmail.com</button>
+                <p style="text-align: center; margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Clicking this will open your email app with the details filled in for you to send.</p>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Visit <span>Us</span></h2>
+            <div class="contact-wrapper">
+                <div>
+                    <p><strong>Address:</strong> 8135 State Ave, Kansas City, KS</p>
+                    <p><strong>Phone:</strong> (913) 299-8821</p>
+                    <p><strong>Hours:</strong> Mon-Sat: 10AM - 7PM</p>
+                </div>
+                <div style="background: #2a3647; height: 200px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                    [ Google Maps Integration ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Hightech Wireless Phones & Repair</p>
+        </div>
+    </footer>
+
+</body>
+</html>
